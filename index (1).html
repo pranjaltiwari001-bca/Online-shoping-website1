@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5f0">
+  <title>VELORA — Everyday, Elevated</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">A little something extra: free shipping on orders over ₹1,999 <span>✦</span></div>
+  <header class="site-header">
+    <button class="icon-btn mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+    <a class="logo" href="#" aria-label="Velora home">VELORA<span>.</span></a>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#shop" data-nav-category="All">Shop all</a>
+      <a href="#shop" data-nav-category="Clothing">Clothing</a>
+      <a href="#shop" data-nav-category="Shoes">Shoes</a>
+      <a href="#shop" data-nav-category="Watches">Watches</a>
+      <a href="#shop" data-nav-category="Beauty">Beauty</a>
+      <a href="#shop" data-nav-category="Accessories">Accessories</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="focusSearch" aria-label="Focus search">⌕</button>
+      <button class="icon-btn wishlist-header" id="showWishlist" aria-label="Show wishlist">♡ <span id="wishlistCount" class="tiny-count">0</span></button>
+      <button class="icon-btn cart-trigger" id="openCart" aria-label="Open cart">Bag <span id="cartCount" class="count-pill">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> THE NEW SEASON EDIT</p>
+        <h1>Find your<br><em>everyday</em> extraordinary.</h1>
+        <p class="hero-description">Considered pieces. Beautiful details. The little things that make a look feel like you.</p>
+        <a class="button button-dark" href="#shop">Explore the collection <span>↗</span></a>
+        <div class="hero-note"><span class="note-stars">★★★★★</span> Loved by 12,000+ happy customers</div>
+      </div>
+      <div class="hero-visual">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85" alt="Friends browsing a curated fashion collection">
+        <div class="hero-sticker"><span>GOOD<br>STYLE</span><b>✳</b><span>GOOD<br>MOOD</span></div>
+        <div class="hero-caption"><span>01 / 04</span><span>Wear what feels like you.</span></div>
+      </div>
+    </section>
+
+    <section class="category-section section-wrap">
+      <div class="section-heading">
+        <div><p class="eyebrow">A WORLD OF GOOD FINDS</p><h2>Shop by <em>category</em></h2></div>
+        <a class="text-link" href="#shop">Discover everything ↗</a>
+      </div>
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-card active" data-category="All"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=80" alt=""><span>Everything</span><small>Explore all</small></button>
+        <button class="category-card" data-category="Clothing"><img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=500&q=80" alt=""><span>Clothing</span><small>Everyday icons</small></button>
+        <button class="category-card" data-category="Shoes"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=500&q=80" alt=""><span>Shoes</span><small>Step your way</small></button>
+        <button class="category-card" data-category="Watches"><img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=500&q=80" alt=""><span>Watches</span><small>Time well spent</small></button>
+        <button class="category-card" data-category="Beauty"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&w=500&q=80" alt=""><span>Beauty & scent</span><small>Your signature</small></button>
+        <button class="category-card" data-category="Accessories"><img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=500&q=80" alt=""><span>Bags & more</span><small>Finishing touches</small></button>
+      </div>
+    </section>
+
+    <section class="shop-section section-wrap" id="shop">
+      <div class="section-heading shop-heading">
+        <div><p class="eyebrow">HANDPICKED FOR YOU</p><h2 id="productsHeading">The good <em>stuff.</em></h2><p class="muted" id="productSubtitle">Fresh finds for your own kind of style.</p></div>
+        <div class="shop-controls">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search the good stuff…" aria-label="Search products"><kbd>↵</kbd></label>
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="featured">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option><option value="rating">Top rated</option>
+          </select>
+        </div>
+      </div>
+      <div class="filter-row" id="filterRow" aria-label="Filter by category">
+        <button class="filter-chip active" data-category="All">All finds</button>
+        <button class="filter-chip" data-category="Clothing">Clothing</button>
+        <button class="filter-chip" data-category="Shoes">Shoes</button>
+        <button class="filter-chip" data-category="Watches">Watches</button>
+        <button class="filter-chip" data-category="Beauty">Beauty & scent</button>
+        <button class="filter-chip" data-category="Accessories">Accessories</button>
+        <button class="filter-chip" data-category="Home">Home & living</button>
+        <button class="filter-chip" data-category="Tech">Tech</button>
+      </div>
+      <div class="results-line"><span id="resultCount">Showing all finds</span><span>Made for your everyday ↗</span></div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+      <div class="empty-state hidden" id="emptyState"><div>⌕</div><h3>No finds just yet</h3><p>Try another search or category.</p><button class="button button-dark" id="resetFilters">Show all products</button></div>
+      <div class="center-action"><button class="button button-outline" id="showAllProducts">You're all caught up <span>✳</span></button></div>
+    </section>
+
+    <section class="editorial section-wrap">
+      <div class="editorial-image"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1100&q=85" alt="A thoughtfully styled boutique interior"></div>
+      <div class="editorial-copy"><p class="eyebrow">LESS, BUT BETTER</p><h2>Good things.<br><em>Great stories.</em></h2><p>We believe personal style isn't about having more. It's about finding the pieces you'll reach for, again and again.</p><a class="text-link" href="#shop">Meet your new favourites ↗</a><div class="editorial-mark">V.</div></div>
+    </section>
+
+    <section class="newsletter">
+      <p class="eyebrow">A GOOD THING IN YOUR INBOX</p><h2>New finds, <em>good vibes.</em></h2><p>Be first to know about fresh drops, little treats and things worth loving.</p>
+      <form id="newsletterForm" class="newsletter-form"><input type="email" id="newsletterEmail" placeholder="Your email address" required aria-label="Email address"><button type="submit">Count me in ↗</button></form><small id="newsletterMessage">By signing up, you agree to receive our occasional updates.</small>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top"><a class="logo" href="#">VELORA<span>.</span></a><p>A little more you, every day.</p><a class="text-link" href="#shop">Back to the good stuff ↑</a></div>
+    <div class="footer-bottom"><span>© 2026 VELORA. Demo storefront.</span><span>Made for the love of finding things.</span><span>Instagram &nbsp; · &nbsp; Pinterest &nbsp; · &nbsp; Contact</span></div>
+  </footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">YOUR LITTLE FINDS</p><h2>Your bag <span id="drawerCount">(0)</span></h2></div><button class="close-btn" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><div>♡</div><h3>Your bag is taking a break.</h3><p>Let's find something you'll love.</p><button class="button button-dark" id="continueShopping">Explore finds</button></div>
+    <div class="cart-footer hidden" id="cartFooter"><div class="shipping-progress"><span id="shippingText">You're close to free shipping!</span><div class="progress-track"><span id="shippingProgress"></span></div></div><div class="subtotal-row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div><p class="tax-note">Shipping and taxes calculated at checkout.</p><button class="button button-dark checkout-btn" id="checkoutBtn">Continue to checkout <span>↗</span></button><p class="secure-note">♡ &nbsp; A lovely choice, securely yours.</p></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+
+  <dialog class="checkout-modal" id="checkoutModal">
+    <form method="dialog" class="modal-close-row"><button class="close-btn" aria-label="Close checkout">×</button></form>
+    <p class="eyebrow">ALMOST YOURS</p><h2>Checkout <em>preview</em></h2>
+    <p>This is a front-end demo. No payment will be taken and no order will be placed.</p>
+    <div class="checkout-summary" id="checkoutSummary"></div>
+    <button class="button button-dark full-width" id="demoOrderBtn">Place demo order</button>
+    <small>To accept real orders, connect a secure backend and payment provider.</small>
+  </dialog>
+</body>
+</html>
